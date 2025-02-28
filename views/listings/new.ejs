@@ -1,0 +1,50 @@
+<% layout("/layouts/boilerplate") -%>
+<div class="row">
+   <div class="col-8 offset-2">
+       <h3>Create a new listing</h3>
+      <form method="POST" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
+         <div class="mb-3">
+             <lable for="title" class="form-label" >Title</lable>
+             <input name="listing[title]" placeholder="Enter a catchy tittle" type="text" class="form-control"  required>
+             <div class="invalid-feedback">please enter a valid title  </div>  
+            </div>
+
+         <div class="mb-3">
+           <lable for="description" class="form-label">Description</lable>
+           <textarea
+            name="listing[description ]" 
+            class="form-control"
+            placeholder="Enter a description"
+            required
+           ></textarea> 
+           <div class="invalid-feedback">please enter short Description  </div>    
+         </div>
+ <div class="mb-3">
+             <lable for="image" class="form-label">Upload Listing Image</lable>
+             <input name="listing[image]"type="file" class="form-control"  required>
+         </div>
+         
+           <div class="row">
+             <div class="mb-3 col-md-4">
+               <lable for="price" class="form-label" class="form-label">price </lable>
+               <input name="listing[price]" placeholder="Rs1200 " class="form-control"  required
+               /> 
+               <div class="invalid-feedback">price should be valid  </div>  
+             </div>
+     
+             <div class="mb-3 col-md-8">
+                <lable for="country" class="form-label" class="form-label">country </lable>
+                <input name="listing[country]" placeholder="india" type="text" class="form-control"  required/>
+                <div class="invalid-feedback">country name should be valid  </div>  
+               </div>   
+            </div>
+           <div class="mb-3">
+             <lable for="" class="form-label" class="form-label">location </lable>
+             <input name="listing[location]" placeholder="Bhopal,Sehore" type="text" class="form-control"  required
+             />
+             <div class="invalid-feedback">location should be valid!  </div>  
+            </div>
+         <button class="btn btn-dark add-btn ">ADD</button>
+      </form> 
+   </div>
+</div>
